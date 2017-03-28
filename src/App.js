@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { getGalleryItems } from './services/contentfulClient'
+
+import contentful from 'contentful'
+
 class App extends Component {
+  componentWillMount () {
+    getGalleryItems()
+  }
+
   render() {
     return (
       <div className="App">
