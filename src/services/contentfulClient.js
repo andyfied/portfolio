@@ -2,7 +2,7 @@ import { spaceID, deliveryAccessToken } from '../config'
 
 import contentful from 'contentful'
 
-export function getGalleryItems () {
+export const getGalleryItems = () => {
     const client = contentful.createClient({
         // This is the space ID. A space is like a project folder in Contentful terms
         space: spaceID,

@@ -5,8 +5,17 @@ import './App.css';
 import { getGalleryItems } from './services/contentfulClient'
 
 import contentful from 'contentful'
+import { connect } from 'react-redux'
 
-class App extends Component {
+const mapStateToProps = (state) => {
+  return {};
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {}
+}
+
+class _App extends Component {
   componentWillMount () {
     getGalleryItems()
   }
@@ -25,5 +34,10 @@ class App extends Component {
     );
   }
 }
+
+const App = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(_App)
 
 export default App;
