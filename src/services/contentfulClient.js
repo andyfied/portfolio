@@ -1,6 +1,4 @@
-import { spaceID, deliveryAccessToken } from '../config'
-
-import contentful from 'contentful'
+/*import contentful from 'contentful'
 
 export const getGalleryItems = () => {
     const client = contentful.createClient({
@@ -21,4 +19,20 @@ export const getGalleryItems = () => {
             console.log('\x1b[31merror occured')
             console.log(error)
         })
+}*/
+
+import { createClient } from 'contentful'
+
+let client
+
+export function initClient (spaceId, accessToken) {
+  client = createClient({
+    space: spaceId,
+    accessToken,
+    host: 'cdn.contentful.com'
+  })
+}
+
+export function getClient () {
+  return client
 }

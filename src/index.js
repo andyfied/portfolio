@@ -1,3 +1,5 @@
+import { spaceId, deliveryAccessToken } from './config'
+import { initClient } from './services/contentfulClient'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -8,6 +10,7 @@ import appReducer from './reducers/index'
 import NoMatch from './components/NoMatch'
 import './index.css';
 
+initClient(spaceId, deliveryAccessToken)
 
 const store = createStore(
   appReducer,
