@@ -25,9 +25,9 @@ const getGalleryItemsRejected = (payload) => {
     }
 }
 
-export const getGalleryItems = () => {
+export const fetchGalleryItems = () => {
     return (dispatch) => {
-        dispatch(getGalleryItemsPending)
+        dispatch(getGalleryItemsPending())
         contentfulService.getClient().getEntries()
             .then(response => dispatch(getGalleryItemsFullfilled(response)))
             .catch(error => dispatch(getGalleryItemsRejected(error)))

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
-import { getGalleryItems } from './actions/actionCreators'
+import { fetchGalleryItems } from './actions/actionCreators'
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,7 +17,8 @@ const mapDispatchToProps = (dispatch) => {
   //return bindActionCreators(actionCreators, dispatch)
   return {
     onGetGalleryItems: () => {
-      getGalleryItems()
+      console.log("get gallery items")
+      dispatch(fetchGalleryItems())
     },
   }
 }

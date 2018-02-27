@@ -1,8 +1,5 @@
 import { combineReducers } from 'redux'
-
-const portfolio = (state={}, action) => {
-    return state
-}
+import portfolio from './portfolio'
 
 // "Root reducer"
 const appReducer = combineReducers({
