@@ -3,13 +3,14 @@ import { bindActionCreators } from 'redux'
 import { fetchGalleryItems } from './actions/actionCreators'
 import logo from './logo.svg';
 import './App.css';
+import PortfolioItem from './components/PortfolioItem'
 
 import contentful from 'contentful'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
   return {
-    
+    portfolio: state.portfolio,
   }
 }
 
@@ -24,14 +25,31 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class _App extends Component {
-  componentWillMount () {
+  componentDidMount () {
     this.props.onGetGalleryItems()
   }
 
   render() {
+
+    let items = []
+
+    if (this.props.portfolio.payload) {
+      items = this.props.portfolio.payload.items
+    }
+
     return (
-      <h1>Hello wooorld!</h1>
-    );
+      <div>
+        <h1>Hello wooorld!</h1>
+        {
+          items.map((item, index) => (
+            <PortfolioItem
+              key={index}
+              item={item}
+            />
+          ))
+        }
+      </div>
+    )
   }
 }
 
