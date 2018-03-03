@@ -9,6 +9,7 @@ import { Router, Route, BrowserRouter } from 'react-router-dom'
 import thunk from 'redux-thunk'
 import appReducer from './reducers/index'
 import NoMatch from './components/NoMatch'
+import 'normalize.css'
 import './index.css';
 
 initClient(spaceId, deliveryAccessToken)
