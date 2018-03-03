@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux'
 import { fetchGalleryItems } from './actions/actionCreators'
 import logo from './logo.svg';
 import './App.css';
-import PortfolioItem from './components/PortfolioItem'
+import Thumb from './components/Thumb'
 
 import contentful from 'contentful'
 import { connect } from 'react-redux'
@@ -15,7 +15,6 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  //return bindActionCreators(actionCreators, dispatch)
   return {
     onGetGalleryItems: () => {
       console.log("get gallery items")
@@ -38,16 +37,18 @@ class _App extends Component {
     }
 
     return (
-      <div>
+      <div className="app">
         <h1>Hello wooorld!</h1>
-        {
-          items.map((item, index) => (
-            <PortfolioItem
-              key={index}
-              item={item}
-            />
-          ))
-        }
+        <section className="grid">
+          {
+            items.map((item, index) => (
+              <Thumb
+                key={index}
+                item={item}
+              />
+            ))
+          }
+        </section>
       </div>
     )
   }
