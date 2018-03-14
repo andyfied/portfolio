@@ -2,15 +2,17 @@ import { spaceId, deliveryAccessToken } from './config'
 import { initClient } from './services/contentfulClient'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
-import { Router, Route, BrowserRouter } from 'react-router-dom'
+import { Router, Route, BrowserRouter, Switch } from 'react-router-dom'
 import thunk from 'redux-thunk'
 import appReducer from './reducers/index'
-import NoMatch from './components/NoMatch'
 import 'normalize.css'
-import './index.css';
+import './index.css'
+
+import App from './App';
+import Contact from './pages/Contact'
+import NoMatch from './pages/NoMatch'
 
 initClient(spaceId, deliveryAccessToken)
 
@@ -23,9 +25,11 @@ const store = createStore(
 ReactDOM.render(
   <Provider store={ store }>
     <BrowserRouter>
-      <div>
-        <Route path="/" component={ App } />
-      </div>
+      <Switch>
+        <Route exact path="/" component={ App } />
+        <Route path="/kontakt" component={ Contact } />
+        <Route path="*" component={ NoMatch } />
+      </Switch>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

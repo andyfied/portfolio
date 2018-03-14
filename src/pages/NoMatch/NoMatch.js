@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import './NoMatch.css'
 
 class NoMatch extends Component {
 
@@ -9,4 +10,4 @@ class NoMatch extends Component {
     }
 };
 
-export default NoMatch;
+export default NoMatch
