@@ -1,1 +1,32 @@
 /* contact styles */
+
+body {
+    margin: 0 auto;
+}
+
+#page-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+/*---CSS for tagline title--- */
+#bytherese-main-container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: flex-end;
+}
+#bytherese-title-container {
+    overflow: auto;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 3%;
+    font-family: 'Courier New', Courier, monospace;
+}
+#bytherese-title {
+    font-size: 2em;
+    align-self: baseline;
+}
+/*---End of CSS for tagline title--- */
