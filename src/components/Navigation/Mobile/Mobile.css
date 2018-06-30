@@ -1,0 +1,20 @@
+.menuTop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+.menuContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.menuContent a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
