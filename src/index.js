@@ -1,7 +1,9 @@
 import { spaceId, deliveryAccessToken } from './config'
 import { initClient } from './services/contentfulClient'
 import React from 'react';
+import { spring } from 'react-motion';
 import ReactDOM from 'react-dom';
+import { AnimatedSwitch } from 'react-router-transition'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import { Router, Route, BrowserRouter, Switch } from 'react-router-dom'
@@ -28,19 +30,37 @@ const store = createStore(
   applyMiddleware(thunk)
 )
 
+const slide = (val) => {
+  return spring(val, {
+    stiffness: 125,
+    damping: 16,
+  });
+}
+
+
 ReactDOM.render(
   <Provider store={ store }>
     <BrowserRouter>
       <div>
         <Navigation />
-        <Switch>
-          <Route exact path="/" component={ App } />
-          <Route path="/gallery" component={ Gallery } />
-          <Route path="/about" component={ About } />
-          <Route path="/pricing" component={ Pricing } />
-          <Route path="/contact" component={ Contact } />
-          <Route path="*" component={ NoMatch } />
-        </Switch>
+        <div className="mainContent">
+          <AnimatedSwitch
+            className="switch-wrapper"
+            atEnter={{ offset: -100 }}
+            atLeave={{ offset: slide(-150) }}
+            atActive={{ offset: slide(0) }}
+            mapStyles={styles => ({
+            transform: `translateX(${styles.offset}%)`,
+            })}
+          >
+              <Route exact path="/" component={ App } />
+              <Route path="/gallery" component={ Gallery } />
+              <Route path="/about" component={ About } />
+              <Route path="/pricing" component={ Pricing } />
+              <Route path="/contact" component={ Contact } />
+              <Route path="*" component={ NoMatch } />
+            </AnimatedSwitch>
+        </div>
       </div>
     </BrowserRouter>
   </Provider>,
