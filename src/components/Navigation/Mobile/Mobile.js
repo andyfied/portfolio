@@ -6,6 +6,7 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@material-ui/icons/Close'
+import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom'
 
 import './Mobile.css'
@@ -51,10 +52,10 @@ class _Mobile extends Component {
                         </IconButton>
                     </div>
                     <nav className="menuContent">
-                        <Link to="/gallery">Gallery</Link>
-                        <Link to="/about">About byTherese</Link>
-                        <Link to="/pricing">Pricing</Link>
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/gallery"><MenuItem onClick={() => {this.props.onSetShowDrawer(false)}}>Gallery</MenuItem></Link>
+                        <Link to="/about"><MenuItem onClick={() => {this.props.onSetShowDrawer(false)}}>About byTherese</MenuItem></Link>
+                        <Link to="/pricing"><MenuItem onClick={() => {this.props.onSetShowDrawer(false)}}>Pricing</MenuItem></Link>
+                        <Link to="/contact"><MenuItem onClick={() => {this.props.onSetShowDrawer(false)}}>Contact</MenuItem></Link>
                     </nav>
                 </SwipeableDrawer>
             </div>
