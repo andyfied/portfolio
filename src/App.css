@@ -12,3 +12,7 @@
     justify-content: flex-start;
     align-content: flex-start;
 }
+
+.pageContent {
+    padding-top: 60px;
+}

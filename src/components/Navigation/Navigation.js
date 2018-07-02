@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { setShowNavigation } from '../../actions/actionCreators'
-import MediaQuery from 'react-responsive';
+import MediaQuery from 'react-responsive'
+import breakpoints from '../../constants/breakpoints'
 import './Navigation.css'
 
 import Desktop from './Desktop'
@@ -76,10 +76,10 @@ class _Navigation extends Component {
             <header
                 style={ showNavigation ? this.style.visible : this.style.hidden }
             >
-                <MediaQuery maxWidth={768}>
+                <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
                     <Mobile />
                 </MediaQuery>
-                <MediaQuery minWidth={768}>
+                <MediaQuery minWidth={breakpoints.DESKTOP_BREAKPOINT}>
                     <Desktop />
                 </MediaQuery>
             </header>

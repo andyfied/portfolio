@@ -1,7 +1,7 @@
 import { 
-    GET_GALLERY_ITEMS_PENDING,
-    GET_GALLERY_ITEMS_FULLFILLED,
-    GET_GALLERY_ITEMS_REJECTED,
+    GET_ASSET_PENDING,
+    GET_ASSET_FULLFILLED,
+    GET_ASSET_REJECTED,
 } from '../actions/actionCreators'
 
 const initialState = {
@@ -10,18 +10,18 @@ const initialState = {
     payload: {},
 }
 
-const portfolio = (state={initialState}, action) => {
+const video = (state={initialState}, action) => {
 
     switch(action.type) {
-        case GET_GALLERY_ITEMS_PENDING:
+        case GET_ASSET_PENDING:
             return {isFetching: true, error: false}
-        case GET_GALLERY_ITEMS_REJECTED:
+        case GET_ASSET_REJECTED:
             return {isFetching: false, error: true, payload: action.payload}
-        case GET_GALLERY_ITEMS_FULLFILLED:
+        case GET_ASSET_FULLFILLED:
             return {isFetching: false, error: false, payload: action.payload}
         default:
             return state
     }
 }
 
-export default portfolio
+export default video

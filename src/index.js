@@ -43,7 +43,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Navigation />
-        <div className="mainContent">
+        <div>
           <AnimatedSwitch
             className="switch-wrapper"
             atEnter={{ offset: -100 }}
@@ -53,12 +53,12 @@ ReactDOM.render(
             transform: `translateX(${styles.offset}%)`,
             })}
           >
-              <Route exact path="/" component={ App } />
-              <Route path="/gallery" component={ Gallery } />
-              <Route path="/about" component={ About } />
-              <Route path="/pricing" component={ Pricing } />
-              <Route path="/contact" component={ Contact } />
-              <Route path="*" component={ NoMatch } />
+              <Route exact path="/" component={ App } onUpdate={() => window.scrollTo(0, 0)} />
+              <Route path="/gallery" component={ Gallery } onUpdate={() => window.scrollTo(0, 0)} />
+              <Route path="/about" component={ About } onUpdate={() => window.scrollTo(0, 0)} />
+              <Route path="/pricing" component={ Pricing } onUpdate={() => window.scrollTo(0, 0)} />
+              <Route path="/contact" component={ Contact } onUpdate={() => window.scrollTo(0, 0)} />
+              <Route path="*" component={ NoMatch } onUpdate={() => window.scrollTo(0, 0)} />
             </AnimatedSwitch>
         </div>
       </div>
