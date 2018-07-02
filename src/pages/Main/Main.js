@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
 import { fetchAsset } from '../../actions/actionCreators'
-import contentful from 'contentful'
 import { connect } from 'react-redux'
+import MediaQuery from 'react-responsive'
+import breakpoints from '../../constants/breakpoints'
 
 import './Main.css'
 
@@ -37,12 +37,19 @@ class _Main extends Component {
             videoUrl = this.props.video.payload.fields.file.url
         }
         return (
-            <div className="videoContainer">
-                <video loop autoPlay>
-                    <source src="//videos.ctfassets.net/lb0qz1ons074/6bhYLv8KeQU04WWW6g6KmM/85a9fad33380907d3a070dfd1c910f9a/My_Movie_Mobile_mp4.m4v" type="video/mp4" />
-                    <source src="//videos.ctfassets.net/lb0qz1ons074/5NZNncAVgckyQmowWk2iYe/340ff052b549c305cfae5a54c8b97efb/My_Movie_Mobile_ogg.ogg" type="video/ogg" />
-                    Your browser does not support the video tag.
-                </video>
+            <div>
+                <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
+                    <h1 style={{paddingTop: '60px'}}>show image on mobile device?</h1>
+                </MediaQuery>
+                <MediaQuery minWidth={breakpoints.DESKTOP_BREAKPOINT}>
+                    <div className="videoContainer">
+                        <video loop autoPlay>
+                            <source src="//videos.ctfassets.net/lb0qz1ons074/6bhYLv8KeQU04WWW6g6KmM/85a9fad33380907d3a070dfd1c910f9a/My_Movie_Mobile_mp4.m4v" type="video/mp4" />
+                            <source src="//videos.ctfassets.net/lb0qz1ons074/5NZNncAVgckyQmowWk2iYe/340ff052b549c305cfae5a54c8b97efb/My_Movie_Mobile_ogg.ogg" type="video/ogg" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </MediaQuery>
             </div>
         )
     }

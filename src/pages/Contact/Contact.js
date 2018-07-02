@@ -2,7 +2,7 @@ import React from 'react'
 import './Contact.css'
 
 const Contact = () => (
-    <div id="page-container" className="pageContent">
+    <div id="page-container">
         <h1>Kontakt</h1>
 
         <div id="bytherese-main-container">

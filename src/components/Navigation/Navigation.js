@@ -22,6 +22,8 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
+const scrollBuffert = 5
+
 const navHeight = 60
 
 class _Navigation extends Component {
@@ -52,11 +54,11 @@ class _Navigation extends Component {
     }
 
     isScrollingUp() {
-        return window.scrollY < this.lastScrollPosition
+        return window.scrollY < (this.lastScrollPosition - scrollBuffert)
     }
 
     isScrollingDown() {
-        return window.scrollY > this.lastScrollPosition
+        return window.scrollY > (this.lastScrollPosition + scrollBuffert)
     }
 
     handleScroll() {
