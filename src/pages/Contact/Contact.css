@@ -30,7 +30,13 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 #bytherese-title {
+    overflow: auto;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 3%;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
     align-self: baseline;
 }
 /*---End of CSS for tagline title--- */
