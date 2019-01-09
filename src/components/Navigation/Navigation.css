@@ -1,16 +1,16 @@
 header {
-    height: 60px;
-    width: 100%;
-    transition: height 0.3s ease;
-    -moz-transition: height 0.3s ease;
-    -webkit-transition: height 0.3s ease;
-    -o-transition: height 0.3s ease;
-    position: fixed;
-    z-index: 100;
-    opacity: 0.9;
+  height: 60px;
+  width: 100%;
+  transition: height 0.3s ease;
+  -moz-transition: height 0.3s ease;
+  -webkit-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  position: fixed;
+  z-index: 100;
+  opacity: 0.9;
 }
 
 header a {
-    padding: 5px;
-    text-decoration: none;
+  padding: 5px;
+  text-decoration: none;
 }

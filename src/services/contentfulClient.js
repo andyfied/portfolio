@@ -25,14 +25,14 @@ import { createClient } from 'contentful'
 
 let client
 
-export function initClient (spaceId, accessToken) {
+export function initClient(spaceId, accessToken) {
   client = createClient({
     space: spaceId,
     accessToken,
-    host: 'cdn.contentful.com'
+    host: 'cdn.contentful.com',
   })
 }
 
-export function getClient () {
+export function getClient() {
   return client
 }

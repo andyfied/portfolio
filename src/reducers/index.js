@@ -6,10 +6,10 @@ import video from './video'
 
 // "Root reducer"
 const appReducer = combineReducers({
-    portfolio,
-    navigation,
-    drawer,
-    video,
-});
+  portfolio,
+  navigation,
+  drawer,
+  video,
+})
 
 export default appReducer
