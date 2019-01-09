@@ -16,6 +16,7 @@
     "normalize.css": "^8.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-feature-toggles": "^3.0.3",
     "react-motion": "^0.5.2",
     "react-redux": "^5.0.3",
     "react-responsive": "^4.1.0",
