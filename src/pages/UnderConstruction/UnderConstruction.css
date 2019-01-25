@@ -8,7 +8,7 @@
     url('../../fonts/cacchampagne_regular_macroman/CACCHAMP.svg#cac_champagneregular') format('svg');
 }
 
-.pageContent {
+.underConstruction.pageContent {
   height: 100vh;
   width: 100vw;
   background-color: #616161; /*#424242*/
@@ -22,13 +22,13 @@
   padding: 0;
 }
 
-h1 {
+.underConstruction h1 {
   font-family: 'cac_champagneregular';
   font-size: 9vh;
   margin: 0;
 }
 
-h2 {
+.underConstruction h2 {
   font-family: 'Montserrat';
   font-size: 3vh;
   font-weight: 200;

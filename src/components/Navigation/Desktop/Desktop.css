@@ -1,7 +1,11 @@
-nav {
+.menu nav.large {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   height: 100%;
+}
+
+.menu .large .menuItem {
+  color: white;
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import './UnderConstruction.css'
 
 const UnderConstruction = () => (
-  <div className="pageContent">
+  <div className="pageContent underConstruction">
     <h1>By Therese</h1>
     <h2>soon available</h2>
   </div>

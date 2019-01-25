@@ -1,0 +1,42 @@
+.main .large .bg {
+  /* The image used */
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main .large .pageContent {
+  height: 100vh;
+  width: 100vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.main .large h1 {
+  font-family: 'cac_champagneregular';
+  font-size: 8vh;
+  margin: 0;
+  color: white;
+  font-weight: 500;
+}
+
+.main .large h2 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  letter-spacing: 6px;
+  font-size: 2vh;
+  margin: 10px 0 20px 0;
+  background-color: gray;
+  padding: 10px;
+}

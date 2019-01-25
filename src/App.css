@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'cac_champagneregular';
+  src: url('./fonts/cacchampagne_regular_macroman/CACCHAMP.eot');
+  src: url('./fonts/cacchampagne_regular_macroman/CACCHAMP.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/cacchampagne_regular_macroman/CACCHAMP.woff') format('woff'),
+    url('./fonts/cacchampagne_regular_macroman/CACCHAMP.ttf') format('truetype'),
+    url('./fonts/cacchampagne_regular_macroman/CACCHAMP.svg#cac_champagneregular') format('svg');
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -15,4 +24,10 @@
 
 .pageContent {
   padding-top: 60px;
+}
+
+h1 {
+  font-family: 'cac_champagneregular';
+  font-size: 8vh;
+  margin: 0;
 }
