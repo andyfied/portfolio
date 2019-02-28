@@ -7,6 +7,11 @@
     url('./fonts/cacchampagne_regular_macroman/CACCHAMP.svg#cac_champagneregular') format('svg');
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #777777;
+}
+
 .app {
   display: flex;
   flex-direction: column;
@@ -30,4 +35,8 @@ h1 {
   font-family: 'cac_champagneregular';
   font-size: 8vh;
   margin: 0;
+}
+
+h2 {
+  color: #545454;
 }

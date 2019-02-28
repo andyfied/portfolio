@@ -1,19 +1,11 @@
 @import '~slick-carousel/slick/slick.css';
 @import '~slick-carousel/slick/slick-theme.css';
 
-.gallery {
-  background-color: black;
-}
-
-.gallery .small img {
-  width: 100%;
-}
-
-.gallery .small .slick-initialized .slick-track {
+/*.gallery .small .slick-initialized .slick-track {
   display: flex;
   align-items: center;
-}
+}*/
 
-.gallery .small .slick-dots li button:before {
+/*.gallery .small .slick-dots li button:before {
   color: white;
-}
+}*/

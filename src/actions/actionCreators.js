@@ -30,7 +30,9 @@ export const fetchGalleryItems = () => {
     dispatch(getGalleryItemsPending())
     contentfulService
       .getClient()
-      .getEntries()
+      .getEntries({
+        content_type: 'galleryItem',
+      })
       .then(response => dispatch(getGalleryItemsFullfilled(response)))
       .catch(error => dispatch(getGalleryItemsRejected(error)))
   }

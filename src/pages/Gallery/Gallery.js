@@ -6,6 +6,7 @@ import MediaQuery from 'react-responsive'
 import breakpoints from '../../constants/breakpoints'
 
 import Thumb from '../../components/Thumb'
+import Review from '../../components/Review'
 
 import './Gallery.css'
 
@@ -29,6 +30,7 @@ class _Gallery extends Component {
       this.props.onGetGalleryItems()
     }
   }
+
   render() {
     let items = []
 
@@ -46,13 +48,13 @@ class _Gallery extends Component {
     }
     return (
       <div className="pageContent gallery">
-        <h1>Gallery</h1>
         <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
           <section className="small">
             <Slider {...settings}>
               {items.map((item, index) => (
-                <div>
-                  <Thumb key={index} item={item} width={400} />
+                <div key={index}>
+                  <Thumb thumb={item.fields.thumb} width={400} />
+                  {item.fields.review && <Review review={item.fields.review} />}
                 </div>
               ))}
             </Slider>

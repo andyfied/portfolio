@@ -1,5 +1,8 @@
 import React from 'react'
-import './Thumb.css'
+
+const styles = {
+  width: '100%',
+}
 
 const getDimensions = (width, height) => {
   let dimensions = ''
@@ -13,11 +16,11 @@ const getDimensions = (width, height) => {
   return dimensions
 }
 
-const Thumb = ({ item, width, height }) => (
+const Thumb = ({ thumb, width, height }) => (
   <img
-    className="thumb"
-    alt={item.fields.thumb.fields.title}
-    src={`${item.fields.thumb.fields.file.url}?fl=progressive${getDimensions(width, height)}`}
+    style={styles}
+    alt={thumb.fields.title}
+    src={`${thumb.fields.file.url}?fl=progressive${getDimensions(width, height)}`}
   />
 )
 
