@@ -11,6 +11,18 @@ import { Link } from 'react-router-dom'
 
 import './Mobile.css'
 
+const styles = {
+  wrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  header: {
+    fontSize: '30px',
+    paddingRight: '17px',
+  },
+}
+
 const mapStateToProps = state => {
   return {
     drawer: state.drawer,
@@ -29,7 +41,7 @@ class _Mobile extends Component {
   render() {
     const showDrawer = this.props.drawer.payload
     return (
-      <div>
+      <div style={styles.wrapper}>
         <IconButton
           color="inherit"
           aria-label="open drawer"
@@ -39,6 +51,7 @@ class _Mobile extends Component {
         >
           <MenuIcon className="menuIcon" />
         </IconButton>
+        <h1 style={styles.header}>byTherese</h1>
         <SwipeableDrawer
           open={showDrawer}
           onClose={() => {

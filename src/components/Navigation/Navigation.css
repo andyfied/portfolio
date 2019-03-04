@@ -7,7 +7,7 @@ header {
   -o-transition: height 0.3s ease;
   position: fixed;
   z-index: 100;
-  opacity: 0.9;
+  background-color: white;
 }
 
 header a {
