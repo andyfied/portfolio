@@ -29,7 +29,7 @@ const toggleNames = {
 }
 
 const toggles = {
-  [toggleNames.SHOW_UNDER_CONSTRUCTION]: false,
+  [toggleNames.SHOW_UNDER_CONSTRUCTION]: true,
 }
 
 initClient(spaceId, deliveryAccessToken)
