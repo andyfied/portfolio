@@ -18,18 +18,20 @@ const About = () => (
     <article style={styles.article}>
       <h2>About</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. At auctor urna nunc id cursus metus aliquam eleifend. Luctus accumsan tortor posuere ac ut.
-        Commodo odio aenean sed adipiscing diam. In ornare quam viverra orci.
+        For as long as I can remember, I have felt the need to create, to express myself through art. Being a creative
+        mind, I love to capture moments, turn feelings into colours and share it with you through my paintings.
       </p>
       <p>
-        Lacus sed viverra tellus in hac habitasse platea dictumst. Feugiat sed lectus vestibulum mattis ullamcorper
-        velit sed ullamcorper. Duis ut diam quam nulla.
+        Today, I spend most of my time drawing in Stavalund, a family farm located deep into the northern Swedish woods.
+        Surrounded by the nature and it’s stillness, this is where I find my peace and inspiration.
       </p>
       <p>
-        Egestas purus viverra accumsan in. Lorem donec massa sapien faucibus et. Tincidunt ornare massa eget egestas.
-        Faucibus purus in massa tempor nec feugiat nisl. Condimentum lacinia quis vel eros donec. Quam vulputate
-        dignissim suspendisse in est. Mollis aliquam ut porttitor leo a diam sollicitudin.
+        All of my paintings hold a foundation of nature, strength, calm and freedom. Those elements make the very core
+        of my drawing – the wild and the free. With my portraits, I hope to mirror those souls and individuals so
+        important to you and others they need to be forever kept in colour.
+      </p>
+      <p>
+        <i>/Therese Åhlund</i>
       </p>
     </article>
   </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import './Small.css'
-import background from './background.png'
+import background from './background3.png'
 
 const mapStateToProps = state => {
   return {}
@@ -18,7 +18,7 @@ class _Small extends Component {
       <div className="small">
         <div className="bg" style={{ backgroundImage: `url(${background})` }}>
           <div className="pageContent">
-            <h2>Handmade paste portraits</h2>
+            <h2>Handmade pastel portraits</h2>
             <h1>byTherese</h1>
           </div>
         </div>
