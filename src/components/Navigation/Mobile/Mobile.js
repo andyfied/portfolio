@@ -97,7 +97,7 @@ class _Mobile extends Component {
                   this.props.onSetShowDrawer(false)
                 }}
               >
-                About byTherese
+                This is me
               </MenuItem>
             </Link>
             <Link to="/pricing">

@@ -4,6 +4,13 @@
   font-style: normal;
   font-variant: normal;
 }
+.font-about {
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-size: 1em;
+  font-style: normal;
+  font-variant: normal;
+  padding-bottom: 30px;
+}
 
 .leftside {
   height: 100vh;

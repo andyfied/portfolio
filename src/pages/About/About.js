@@ -19,7 +19,7 @@ const About = () => (
     <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
       <img style={styles.img} alt="About" src={bgImage} />
       <article style={styles.article}>
-        <h2>About</h2>
+        <h2>This is me</h2>
         <p className="font-about">
           For as long as I can remember, I have felt the need to create, to express myself through art. Being a creative
           mind, I love to capture moments, turn feelings into colours and share it with you through my paintings.
@@ -42,7 +42,7 @@ const About = () => (
       <div className="row">
         <div className="col">
           <div className="leftside">
-            <h2>About</h2>
+            <h2>This is me</h2>
             <p className="font-about">
               For as long as I can remember, I have felt the need to create, to express myself through art. Being a
               creative mind, I love to capture moments, turn feelings into colours and share it with you through my
@@ -57,7 +57,7 @@ const About = () => (
               core of my drawing – the wild and the free. With my portraits, I hope to mirror those souls and
               individuals so important to you and others they need to be forever kept in colour.
             </p>
-            <p className="font-about">
+            <p className="font-about-end">
               <i>/Therese Åhlund</i>
             </p>
           </div>
