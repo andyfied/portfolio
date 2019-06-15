@@ -3,13 +3,6 @@
   width: 100vw;
 }
 
-#size-of-painting {
-  height: 50%;
-  background-image: url(Tavla.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .card-view {
   border-radius: 10px;
   box-shadow: 0.5px 1.5px 3px rgba(0, 0, 0, 0.5);
@@ -20,9 +13,37 @@
   padding-left: 20px;
   margin-bottom: 5%;
 }
-
 .header-img {
   width: 100%;
   margin-top: 2%;
   box-shadow: 0.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+}
+.header-img-desktop {
+  width: 45%;
+  box-shadow: 0.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+}
+.card-view-desktop {
+  border-radius: 10px;
+  box-shadow: 0.5px 1.5px 3px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+  padding-bottom: 20px;
+  background-color: #fff;
+  padding-top: 1px;
+  padding-left: 20px;
+  width: 50%;
+  margin-bottom: 5%;
+}
+
+.row {
+  width: 100vw;
+  height: 80vh;
+}
+
+.rightside-desktop {
+  height: 50vh;
+  width: 50vw;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  align-items: center;
 }

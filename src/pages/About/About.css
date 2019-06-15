@@ -1,0 +1,46 @@
+.font-about {
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+  font-size: 1em;
+  font-style: normal;
+  font-variant: normal;
+}
+
+.leftside {
+  height: 100vh;
+  width: 50vw;
+  display: inline-block;
+  position: absolute;
+}
+.leftside p {
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 35px;
+}
+.leftside h2 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.rightside,
+.bottomright {
+  height: 50vh;
+  width: 50vw;
+  display: inline-block;
+  position: absolute;
+}
+
+.leftside {
+  background: #f1f1f1;
+  left: 0;
+}
+.rightside {
+  background-image: url('./mobile/assets/background.jpg');
+  background-size: cover;
+  right: 0;
+}
+.bottomright {
+  background-image: url('./mobile/assets/header-picture.jpg');
+  background-size: cover;
+  right: 0;
+  bottom: 0;
+}
