@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { fetchGalleryItems } from '../../actions/actionCreators'
 import { connect } from 'react-redux'
-import Slider from 'react-slick'
+import { Carousel } from 'react-responsive-carousel'
 import MediaQuery from 'react-responsive'
 import breakpoints from '../../constants/breakpoints'
 
@@ -9,6 +9,7 @@ import Thumb from '../../components/Thumb'
 import Review from '../../components/Review'
 
 import './Gallery.css'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const mapStateToProps = state => {
   return {
@@ -34,15 +35,6 @@ class _Gallery extends Component {
   render() {
     let items = []
 
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      lazyLoad: 'progressive',
-    }
-
     if (this.props.portfolio.payload) {
       items = this.props.portfolio.payload.items
     }
@@ -50,14 +42,17 @@ class _Gallery extends Component {
       <div className="pageContent gallery">
         <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
           <section className="small">
-            <Slider {...settings}>
+            <Carousel showArrows={false} showStatus={false} showThumbs={false}>
               {items.map((item, index) => (
                 <div key={index}>
-                  <Thumb thumb={item.fields.thumb} width={400} />
-                  {item.fields.review && <Review review={item.fields.review} />}
+                  <img
+                    alt={item.fields.thumb.fields.title}
+                    src={`${item.fields.thumb.fields.file.url}?fl=progressive&w=400`}
+                  />
+                  {/*item.fields.review*/ false && <Review review={item.fields.review} />}
                 </div>
               ))}
-            </Slider>
+            </Carousel>
           </section>
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.DESKTOP_BREAKPOINT}>
