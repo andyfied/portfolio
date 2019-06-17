@@ -1,8 +1,3 @@
-.pageContent {
-  height: 100vh;
-  width: 100vw;
-}
-
 .card-view {
   border-radius: 10px;
   box-shadow: 0.5px 1.5px 3px rgba(0, 0, 0, 0.5);

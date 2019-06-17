@@ -42,7 +42,7 @@ class _Gallery extends Component {
       <div className="pageContent gallery">
         <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
           <section className="small">
-            <Carousel showArrows={false} showStatus={false}>
+            <Carousel showArrows={false} showStatus={false} showThumbs={false}>
               {items.map((item, index) => (
                 <div key={index}>
                   <img
