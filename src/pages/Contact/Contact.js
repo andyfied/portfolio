@@ -33,19 +33,23 @@ const Contact = () => (
     <p>To find out more, place a customized order or buy any of my current paintings, please contact me at:</p>
 
     <div style={styles.contactWrapper}>
-      <a href="https://www.instagram.com/bytherese.art/" style={styles.link}>
+      <a href="https://www.instagram.com/bytherese.art/" target="_blank" style={styles.link}>
         <img style={styles.img} alt="instagram" src={instagram} />
         <div>@byTherese.art</div>
       </a>
     </div>
     <div style={styles.contactWrapper}>
-      <a href="https://www.facebook.com/pages/category/Art/ByTherese-603871559947894/" style={styles.link}>
+      <a
+        href="https://www.facebook.com/pages/category/Art/ByTherese-603871559947894/"
+        target="_blank"
+        style={styles.link}
+      >
         <img style={styles.img} alt="facebook" src={facebook} />
         &#47;byTherese
       </a>
     </div>
     <div style={styles.contactWrapper}>
-      <a href="#" style={styles.link}>
+      <a href="mailto:byTherese@gmail.com" style={styles.link}>
         <img style={styles.img} alt="email" src={email} />
         byTherese@gmail.com
       </a>
