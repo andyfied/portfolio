@@ -4,6 +4,10 @@ export const GET_GALLERY_ITEMS_PENDING = 'Waiting for gallery items'
 export const GET_GALLERY_ITEMS_FULLFILLED = 'Received gallery items'
 export const GET_GALLERY_ITEMS_REJECTED = 'Failed to receive gallery items'
 
+export const GET_MAIN_IMAGE_PENDING = 'Waiting for main image'
+export const GET_MAIN_IMAGE_FULLFILLED = 'Received main image'
+export const GET_MAIN_IMAGE_REJECTED = 'Falied to receive main image'
+
 export const GET_ASSET_PENDING = 'Waiting for asset'
 export const GET_ASSET_FULLFILLED = 'Reveived asset'
 export const GET_ASSET_REJECTED = 'Falied to reveive asset'
@@ -35,6 +39,33 @@ export const fetchGalleryItems = () => {
       })
       .then(response => dispatch(getGalleryItemsFullfilled(response)))
       .catch(error => dispatch(getGalleryItemsRejected(error)))
+  }
+}
+
+const getMainImagePending = () => ({
+  type: GET_MAIN_IMAGE_PENDING,
+})
+
+const getMainImageFullfilled = payload => ({
+  type: GET_MAIN_IMAGE_FULLFILLED,
+  payload: payload,
+})
+
+const getMainImageRejected = payload => ({
+  type: GET_MAIN_IMAGE_REJECTED,
+  payload: payload,
+})
+
+export const fetchMainImage = () => {
+  return dispatch => {
+    dispatch(getMainImagePending())
+    contentfulService
+      .getClient()
+      .getEntries({
+        content_type: 'mainImage',
+      })
+      .then(response => dispatch(getMainImageFullfilled(response)))
+      .catch(error => dispatch(getMainImageRejected(error)))
   }
 }
 

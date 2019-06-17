@@ -1,22 +1,38 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { fetchMainImage } from '../../../actions/actionCreators'
 
 import './Small.css'
-import background from './background3.png'
 
 const mapStateToProps = state => {
-  return {}
+  return {
+    main: state.main,
+  }
 }
 
 const mapDispatchToProps = dispatch => {
-  return {}
+  return {
+    onFetchMainImage: () => {
+      dispatch(fetchMainImage())
+    },
+  }
 }
 
 class _Small extends Component {
+  componentDidMount() {
+    if (!this.props.main.payload) {
+      this.props.onFetchMainImage()
+    }
+  }
+
   render() {
+    let imageUrl = ''
+    if (this.props.main.payload) {
+      imageUrl = `${this.props.main.payload.items[0].fields.mobile.fields.file.url}?fl=progressive&w=800`
+    }
     return (
       <div className="small">
-        <div className="bg" style={{ backgroundImage: `url(${background})` }}>
+        <div className="bg" style={{ backgroundImage: `url(${imageUrl})` }}>
           <div className="pageContent">
             <h2>Handmade pastel portraits</h2>
             <h1>byTherese</h1>
