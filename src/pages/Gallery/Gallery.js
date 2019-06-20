@@ -11,6 +11,23 @@ import Review from '../../components/Review'
 import './Gallery.css'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
+const styles = {
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'start',
+  },
+  thumbWrapperSmall: {
+    width: 'calc(50% - 4px)',
+    margin: '2px',
+  },
+  thumbWrapperLarge: {
+    width: 'calc(25% - 4px)',
+    margin: '2px',
+  },
+}
+
 const mapStateToProps = state => {
   return {
     portfolio: state.portfolio,
@@ -34,31 +51,29 @@ class _Gallery extends Component {
 
   render() {
     let items = []
+    let itemsLength = 0
 
     if (this.props.portfolio.payload) {
       items = this.props.portfolio.payload.items
+      itemsLength = items.length
     }
     return (
       <div className="pageContent gallery">
         <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
-          <section className="small">
-            <Carousel showArrows={false} showStatus={false} showThumbs={false}>
-              {items.map((item, index) => (
-                <div key={index}>
-                  <img
-                    alt={item.fields.thumb.fields.title}
-                    src={`${item.fields.thumb.fields.file.url}?fl=progressive&w=800`}
-                  />
-                  {/*item.fields.review*/ false && <Review review={item.fields.review} />}
-                </div>
-              ))}
-            </Carousel>
+          <section className="small" style={styles.wrapper}>
+            {items.map((item, index) => (
+              <div style={styles.thumbWrapperSmall}>
+                <Thumb thumb={item.fields.thumb} key={index} width={400} height={400} />
+              </div>
+            ))}
           </section>
         </MediaQuery>
         <MediaQuery minWidth={breakpoints.DESKTOP_BREAKPOINT}>
-          <section>
+          <section className="small" style={styles.wrapper}>
             {items.map((item, index) => (
-              <Thumb key={index} item={item} width={400} height={400} />
+              <div style={styles.thumbWrapperLarge}>
+                <Thumb thumb={item.fields.thumb} key={index} width={800} height={800} />
+              </div>
             ))}
           </section>
         </MediaQuery>

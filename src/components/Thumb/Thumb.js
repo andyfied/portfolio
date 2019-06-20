@@ -1,7 +1,11 @@
 import React from 'react'
 
 const styles = {
-  width: '100%',
+  image: {
+    width: '100%',
+    height: 'auto',
+    display: 'block',
+  },
 }
 
 const getDimensions = (width, height) => {
@@ -17,11 +21,13 @@ const getDimensions = (width, height) => {
 }
 
 const Thumb = ({ thumb, width, height }) => (
-  <img
-    style={styles}
-    alt={thumb.fields.title}
-    src={`${thumb.fields.file.url}?fl=progressive${getDimensions(width, height)}`}
-  />
+  <div style={styles.wrapper}>
+    <img
+      style={styles.image}
+      alt={thumb.fields.title}
+      src={`${thumb.fields.file.url}?fl=progressive&fit=thumb${getDimensions(width, height)}`}
+    />
+  </div>
 )
 
 export default Thumb
