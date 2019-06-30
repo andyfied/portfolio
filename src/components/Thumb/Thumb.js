@@ -25,7 +25,7 @@ const Thumb = ({ thumb, width, height }) => (
     <img
       style={styles.image}
       alt={thumb.fields.title}
-      src={`${thumb.fields.file.url}?fl=progressive&fit=thumb${getDimensions(width, height)}`}
+      src={`${thumb.fields.file.url}?fm=jpg&fl=progressive&fit=thumb${getDimensions(width, height)}`}
     />
   </div>
 )
