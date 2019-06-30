@@ -62,8 +62,8 @@ class _Gallery extends Component {
         <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
           <section className="small" style={styles.wrapper}>
             {items.map((item, index) => (
-              <div style={styles.thumbWrapperSmall}>
-                <Thumb thumb={item.fields.thumb} key={index} width={400} height={400} />
+              <div style={styles.thumbWrapperSmall} key={index}>
+                <Thumb thumb={item.fields.thumb} width={400} height={400} />
               </div>
             ))}
           </section>
@@ -71,8 +71,8 @@ class _Gallery extends Component {
         <MediaQuery minWidth={breakpoints.DESKTOP_BREAKPOINT}>
           <section className="small" style={styles.wrapper}>
             {items.map((item, index) => (
-              <div style={styles.thumbWrapperLarge}>
-                <Thumb thumb={item.fields.thumb} key={index} width={800} height={800} />
+              <div style={styles.thumbWrapperLarge} key={index}>
+                <Thumb thumb={item.fields.thumb} width={800} height={800} />
               </div>
             ))}
           </section>
