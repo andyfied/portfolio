@@ -4,6 +4,7 @@ import navigation from './navigation'
 import drawer from './drawer'
 import video from './video'
 import main from './main'
+import carousel from './carousel'
 
 // "Root reducer"
 const appReducer = combineReducers({
@@ -12,6 +13,7 @@ const appReducer = combineReducers({
   drawer,
   video,
   main,
+  carousel,
 })
 
 export default appReducer

@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
-import { fetchGalleryItems } from '../../actions/actionCreators'
+import { fetchGalleryItems, setShowCarousel, setSelectedImage, setShowNavigation } from '../../actions/actionCreators'
 import { connect } from 'react-redux'
-import { Carousel } from 'react-responsive-carousel'
 import MediaQuery from 'react-responsive'
 import breakpoints from '../../constants/breakpoints'
 
 import Thumb from '../../components/Thumb'
 import Review from '../../components/Review'
+import ImageModal from '../../components/ImageModal'
 
 import './Gallery.css'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const styles = {
   wrapper: {
@@ -31,6 +30,7 @@ const styles = {
 const mapStateToProps = state => {
   return {
     portfolio: state.portfolio,
+    carousel: state.carousel,
   }
 }
 
@@ -38,6 +38,15 @@ const mapDispatchToProps = dispatch => {
   return {
     onGetGalleryItems: () => {
       dispatch(fetchGalleryItems())
+    },
+    onSetShowCarousel: payload => {
+      dispatch(setShowCarousel(payload))
+    },
+    onSetSelectedImage: payload => {
+      dispatch(setSelectedImage(payload))
+    },
+    onSetShowNavigation: payload => {
+      dispatch(setShowNavigation(payload))
     },
   }
 }
@@ -49,20 +58,35 @@ class _Gallery extends Component {
     }
   }
 
+  openCarousel = index => {
+    this.props.onSetSelectedImage(index)
+    this.props.onSetShowNavigation(false)
+    this.props.onSetShowCarousel(true)
+  }
+
+  closeCarousel = () => {
+    this.props.onSetShowCarousel(false)
+    this.props.onSetShowNavigation(true)
+  }
+
   render() {
     let items = []
-    let itemsLength = 0
 
     if (this.props.portfolio.payload) {
       items = this.props.portfolio.payload.items
-      itemsLength = items.length
     }
     return (
       <div className="pageContent gallery">
         <MediaQuery maxWidth={breakpoints.MOBILE_BREAKPOINT}>
           <section className="small" style={styles.wrapper}>
             {items.map((item, index) => (
-              <div style={styles.thumbWrapperSmall} key={index}>
+              <div
+                style={styles.thumbWrapperSmall}
+                key={index}
+                onClick={() => {
+                  this.openCarousel(index)
+                }}
+              >
                 <Thumb thumb={item.fields.thumb} width={400} height={400} />
               </div>
             ))}
@@ -77,6 +101,12 @@ class _Gallery extends Component {
             ))}
           </section>
         </MediaQuery>
+        <ImageModal
+          images={items}
+          isOpen={this.props.carousel.showCarousel}
+          onClose={this.closeCarousel}
+          selectedImage={this.props.carousel.selectedImage}
+        />
       </div>
     )
   }

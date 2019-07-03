@@ -11,6 +11,7 @@ import Mobile from './Mobile'
 const mapStateToProps = state => {
   return {
     navigation: state.navigation,
+    imageModal: state.carousel,
   }
 }
 
@@ -60,7 +61,7 @@ class _Navigation extends Component {
   }
 
   handleScroll() {
-    if (this.isScrollingUp()) {
+    if (this.isScrollingUp() && !this.props.imageModal.showCarousel) {
       this.props.onSetShowNavigation(true)
     } else if (this.isScrollingDown() && window.scrollY > navHeight) {
       this.props.onSetShowNavigation(false)

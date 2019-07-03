@@ -14,6 +14,9 @@ export const GET_ASSET_REJECTED = 'Falied to reveive asset'
 
 export const SHOW_NAVIGATION = 'show navigation bar'
 export const SHOW_DRAWER = 'show drawer for mobile devices'
+export const SHOW_CAROUSEL = 'show image carousel'
+
+export const SELECTED_IMAGE = 'Selected image in carousel'
 
 const getGalleryItemsPending = () => ({
   type: GET_GALLERY_ITEMS_PENDING,
@@ -101,5 +104,15 @@ export const setShowNavigation = payload => ({
 
 export const setShowDrawer = payload => ({
   type: SHOW_DRAWER,
+  payload: payload,
+})
+
+export const setShowCarousel = payload => ({
+  type: SHOW_CAROUSEL,
+  payload: payload,
+})
+
+export const setSelectedImage = payload => ({
+  type: SELECTED_IMAGE,
   payload: payload,
 })
