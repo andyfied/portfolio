@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import './ImageModal.css'
 
 const styles = {
   content: {
@@ -16,7 +17,7 @@ const styles = {
     transform: 'translate(-50%, -50%)',
     padding: 0,
     paddingBottom: '30px',
-    background: 'black',
+    background: 'rgba(0,0,0,0.8)',
   },
   closeButton: {
     float: 'right',

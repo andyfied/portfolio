@@ -1,0 +1,6 @@
+.carousel .slide {
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
