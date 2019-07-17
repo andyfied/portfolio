@@ -39,6 +39,7 @@ export const fetchGalleryItems = () => {
       .getClient()
       .getEntries({
         content_type: 'galleryItem',
+        order: '-sys.createdAt',
       })
       .then(response => dispatch(getGalleryItemsFullfilled(response)))
       .catch(error => dispatch(getGalleryItemsRejected(error)))
