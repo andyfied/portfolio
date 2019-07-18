@@ -95,7 +95,13 @@ class _Gallery extends Component {
         <MediaQuery minWidth={breakpoints.DESKTOP_BREAKPOINT}>
           <section className="small" style={styles.wrapper}>
             {items.map((item, index) => (
-              <div style={styles.thumbWrapperLarge} key={index}>
+              <div
+                style={styles.thumbWrapperLarge}
+                key={index}
+                onClick={() => {
+                  this.openCarousel(index)
+                }}
+              >
                 <Thumb thumb={item.fields.thumb} width={800} height={800} />
               </div>
             ))}

@@ -4,3 +4,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.imageModal_large .carousel.carousel-slider {
+  height: 90vh;
+}
+
+.imageModal_large .carousel .slide {
+  height: 90vh;
+}
+
+.imageModal_large .carousel .slide img {
+  width: auto;
+  height: 90vh;
+}
