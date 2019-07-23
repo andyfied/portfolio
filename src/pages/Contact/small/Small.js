@@ -48,9 +48,9 @@ const Small = () => (
       </a>
     </div>
     <div style={styles.contactWrapper}>
-      <a href="mailto:byTherese@gmail.com" style={styles.link}>
+      <a href="mailto:bytherese.art@gmail.com" style={styles.link}>
         <img style={styles.img} alt="email" src={email} />
-        byTherese@gmail.com
+        byTherese.art@gmail.com
       </a>
     </div>
   </div>
