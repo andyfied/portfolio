@@ -51,7 +51,7 @@ class _Small extends Component {
       <div style={styles.pageContent}>
         <img style={styles.img} alt="About" src={imageUrl} />
         <section style={styles.mainSection}>
-          <h2>Customized Paintings</h2>
+          <h2>Customized Drawings</h2>
           <p style={styles.section}>
             Prices may vary due to size, theme etc. To get an exact price for your customized painting, please send me
             some information about the order you want to place.

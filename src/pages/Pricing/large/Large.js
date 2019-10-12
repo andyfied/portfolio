@@ -54,7 +54,7 @@ class _Large extends Component {
     }
     return (
       <div style={styles.pageContent}>
-        <h2 style={styles.header}>Customized Paintings</h2>
+        <h2 style={styles.header}>Customized Drawings</h2>
         <div className="row">
           <div className="col">
             <img className="header-img-desktop" alt="About" src={imageUrl} />
