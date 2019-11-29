@@ -59,7 +59,7 @@ class _Small extends Component {
           <section className="card-view">
             <h3>40 x 50 cm</h3>
             <h4>
-              <em>From 3999 SEK</em>
+              <em>From 4499 SEK</em>
             </h4>
             <p>
               <em>Includes framing</em>
@@ -68,7 +68,7 @@ class _Small extends Component {
           <section className="card-view">
             <h3>50 x 70 cm</h3>
             <h4>
-              <em>From 6499 SEK</em>
+              <em>From 6999 SEK</em>
             </h4>
             <p>
               <em>Includes framing</em>
