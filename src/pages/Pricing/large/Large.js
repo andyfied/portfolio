@@ -60,6 +60,15 @@ class _Large extends Component {
             <img className="header-img-desktop" alt="About" src={imageUrl} />
             <div className="rightside-desktop">
               <div className="card-view-desktop">
+                <h3>30 x 40 cm</h3>
+                <h4>
+                  <em>From 3299 SEK</em>
+                </h4>
+                <p>
+                  <em>Includes framing</em>
+                </p>
+              </div>
+              <div className="card-view-desktop">
                 <h3>40 x 50 cm</h3>
                 <h4>
                   <em>From 4499 SEK</em>

@@ -57,6 +57,15 @@ class _Small extends Component {
             some information about the order you want to place.
           </p>
           <section className="card-view">
+            <h3>30 x 40 cm</h3>
+            <h4>
+              <em>From 3299 SEK</em>
+            </h4>
+            <p>
+              <em>Includes framing</em>
+            </p>
+          </section>
+          <section className="card-view">
             <h3>40 x 50 cm</h3>
             <h4>
               <em>From 4499 SEK</em>
