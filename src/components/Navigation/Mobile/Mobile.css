@@ -17,6 +17,7 @@
 .menuContent a {
   padding-top: 10px;
   padding-bottom: 10px;
+  text-decoration: none;
 }
 
 .menuIcon {

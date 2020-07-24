@@ -34,7 +34,7 @@ class _Small extends Component {
       <div className="small">
         <div className="bg" style={{ backgroundImage: `url(${imageUrl})` }}>
           <div className="pageContent">
-            <h2>Handmade pastel portraits</h2>
+            <h2>Handgjorda pastellporträtt</h2>
             <h1>byTherese</h1>
           </div>
         </div>

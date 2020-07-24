@@ -16,19 +16,19 @@ const Desktop = () => (
   <nav className="large">
     <h1 style={styles.header}>byTherese</h1>
     <Link to="/">
-      <MenuItem className="menuItem">Home</MenuItem>
+      <MenuItem className="menuItem">Hem</MenuItem>
     </Link>
     <Link to="/gallery">
-      <MenuItem className="menuItem">Gallery</MenuItem>
+      <MenuItem className="menuItem">Galleri</MenuItem>
     </Link>
     <Link to="/about">
-      <MenuItem className="menuItem">About</MenuItem>
+      <MenuItem className="menuItem">Om mig</MenuItem>
     </Link>
     <Link to="/pricing">
-      <MenuItem className="menuItem">Pricing</MenuItem>
+      <MenuItem className="menuItem">Priser</MenuItem>
     </Link>
     <Link to="/contact">
-      <MenuItem className="menuItem">Contact</MenuItem>
+      <MenuItem className="menuItem">Kontakt</MenuItem>
     </Link>
   </nav>
 )

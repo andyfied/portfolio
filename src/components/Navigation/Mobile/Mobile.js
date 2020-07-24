@@ -79,7 +79,7 @@ class _Mobile extends Component {
                   this.props.onSetShowDrawer(false)
                 }}
               >
-                Home
+                Hem
               </MenuItem>
             </Link>
             <Link to="/gallery">
@@ -88,7 +88,7 @@ class _Mobile extends Component {
                   this.props.onSetShowDrawer(false)
                 }}
               >
-                Gallery
+                Galleri
               </MenuItem>
             </Link>
             <Link to="/about">
@@ -97,7 +97,7 @@ class _Mobile extends Component {
                   this.props.onSetShowDrawer(false)
                 }}
               >
-                This is me
+                Om mig
               </MenuItem>
             </Link>
             <Link to="/pricing">
@@ -106,7 +106,7 @@ class _Mobile extends Component {
                   this.props.onSetShowDrawer(false)
                 }}
               >
-                Pricing
+                Priser
               </MenuItem>
             </Link>
             <Link to="/contact">
@@ -115,7 +115,7 @@ class _Mobile extends Component {
                   this.props.onSetShowDrawer(false)
                 }}
               >
-                Contact
+                Kontakt
               </MenuItem>
             </Link>
           </nav>

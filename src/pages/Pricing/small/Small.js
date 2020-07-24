@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '../Pricing.css'
 import { fetchAsset } from '../../../actions/actionCreators'
+import { Link } from 'react-router-dom'
 
 const styles = {
   pageContent: {
@@ -13,11 +14,13 @@ const styles = {
     paddingRight: '30px',
   },
   section: {
-    textAlign: 'justify',
-    paddingBottom: '20px',
+    paddingBottom: '10px',
   },
   img: {
     width: '100%',
+  },
+  link: {
+    color: 'inherit',
   },
 }
 
@@ -51,36 +54,47 @@ class _Small extends Component {
       <div style={styles.pageContent}>
         <img style={styles.img} alt="About" src={imageUrl} />
         <section style={styles.mainSection}>
-          <h2>Customized Drawings</h2>
+          <h2>Priser</h2>
           <p style={styles.section}>
-            Prices may vary due to size, theme etc. To get an exact price for your customized painting, please send me
-            some information about the order you want to place.
+            Jag tecknar i en fotorealistisk stil med torrpasteller. Varje verk är unikt och tecknat utifrån dina
+            önskemål som kund. Jag använder mig av material av högsta kvalitét och skapar hantverk som fångar, speglar
+            och framhäver motivets specifika personlighet.
+          </p>
+          <p style={styles.section}>
+            Priserna utgår ifrån en individ och individuella priser sätts vid tillägg av bakgrund, flera individer eller
+            teman.
+          </p>
+          <p style={styles.section}>
+            <Link to="/contact" style={styles.link}>
+              Kontakta
+            </Link>{' '}
+            mig för mer information och prisuppgifter för just din tavla.
           </p>
           <section className="card-view">
             <h3>30 x 40 cm</h3>
             <h4>
-              <em>From 3299 SEK</em>
+              <em>Från 3299 SEK</em>
             </h4>
             <p>
-              <em>Includes framing</em>
+              <em>Inklusive inramning.</em>
             </p>
           </section>
           <section className="card-view">
             <h3>40 x 50 cm</h3>
             <h4>
-              <em>From 4499 SEK</em>
+              <em>Från 4499 SEK</em>
             </h4>
             <p>
-              <em>Includes framing</em>
+              <em>Inklusive inramning.</em>
             </p>
           </section>
           <section className="card-view">
             <h3>50 x 70 cm</h3>
             <h4>
-              <em>From 6999 SEK</em>
+              <em>Från 6999 SEK</em>
             </h4>
             <p>
-              <em>Includes framing</em>
+              <em>Inklusive inramning.</em>
             </p>
           </section>
         </section>

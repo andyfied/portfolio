@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '../Pricing.css'
 import { fetchAsset } from '../../../actions/actionCreators'
+import { Link } from 'react-router-dom'
 
 const styles = {
   pageContent: {
@@ -23,6 +24,22 @@ const styles = {
   header: {
     fontSize: '54px',
     fontWeight: '100',
+  },
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  columnLeft: {
+    flex: '0 0 50%',
+    paddingRight: '45px',
+  },
+  columnRight: {
+    flex: '0 0 50%',
+    paddingLeft: '45px',
+  },
+  link: {
+    color: 'inherit',
   },
 }
 
@@ -54,38 +71,54 @@ class _Large extends Component {
     }
     return (
       <div style={styles.pageContent}>
-        <h2 style={styles.header}>Customized Drawings</h2>
-        <div className="row">
-          <div className="col">
+        <h2 style={styles.header}>Priser</h2>
+        <div style={styles.wrapper}>
+          <div style={styles.columnLeft}>
             <img className="header-img-desktop" alt="About" src={imageUrl} />
-            <div className="rightside-desktop">
-              <div className="card-view-desktop">
-                <h3>30 x 40 cm</h3>
-                <h4>
-                  <em>From 3299 SEK</em>
-                </h4>
-                <p>
-                  <em>Includes framing</em>
-                </p>
-              </div>
-              <div className="card-view-desktop">
-                <h3>40 x 50 cm</h3>
-                <h4>
-                  <em>From 4499 SEK</em>
-                </h4>
-                <p>
-                  <em>Includes framing</em>
-                </p>
-              </div>
-              <div className="card-view-desktop">
-                <h3>50 x 70 cm</h3>
-                <h4>
-                  <em>From 6999 SEK</em>
-                </h4>
-                <p>
-                  <em>Includes framing</em>
-                </p>
-              </div>
+            <p style={styles.section}>
+              Jag tecknar i en fotorealistisk stil med torrpasteller. Varje verk är unikt och tecknat utifrån dina
+              önskemål som kund. Jag använder mig av material av högsta kvalitét och skapar hantverk som fångar, speglar
+              och framhäver motivets specifika personlighet.
+            </p>
+            <p style={styles.section}>
+              Priserna utgår ifrån en individ och individuella priser sätts vid tillägg av bakgrund, flera individer
+              eller teman.
+            </p>
+            <p style={styles.section}>
+              <Link to="/contact" style={styles.link}>
+                Kontakta
+              </Link>{' '}
+              mig för mer information och prisuppgifter för just din tavla.
+            </p>
+          </div>
+
+          <div style={styles.columnRight}>
+            <div className="card-view-desktop">
+              <h3>30 x 40 cm</h3>
+              <h4>
+                <em>Från 3299 SEK</em>
+              </h4>
+              <p>
+                <em>Inklusive inramning.</em>
+              </p>
+            </div>
+            <div className="card-view-desktop">
+              <h3>40 x 50 cm</h3>
+              <h4>
+                <em>Från 4499 SEK</em>
+              </h4>
+              <p>
+                <em>Inklusive inramning.</em>
+              </p>
+            </div>
+            <div className="card-view-desktop">
+              <h3>50 x 70 cm</h3>
+              <h4>
+                <em>Från 6999 SEK</em>
+              </h4>
+              <p>
+                <em>Inklusive inramning.</em>
+              </p>
             </div>
           </div>
         </div>

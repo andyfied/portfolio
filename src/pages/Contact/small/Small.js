@@ -28,8 +28,7 @@ const styles = {
 
 const Small = () => (
   <div style={styles.wrapper}>
-    <h2>Contact</h2>
-    <p>To find out more, place a customized order or buy any of my current drawings, please contact me at:</p>
+    <h2>Kontakt</h2>
 
     <div style={styles.contactWrapper}>
       <a href="https://www.instagram.com/bytherese.art/" target="_blank" style={styles.link}>

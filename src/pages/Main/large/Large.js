@@ -35,7 +35,7 @@ class _Large extends Component {
         <div className="bg" style={{ backgroundImage: `url(${imageUrl})` }}>
           <div className="pageContent">
             <h1>byTherese</h1>
-            <h2>Handmade pastel portraits</h2>
+            <h2>Handgjorda pastellporträtt</h2>
           </div>
         </div>
       </div>

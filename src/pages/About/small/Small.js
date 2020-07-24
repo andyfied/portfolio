@@ -43,20 +43,19 @@ class _Small extends Component {
       <div className="pageContent">
         <img style={styles.img} alt="About" src={imageUrl} />
         <article style={styles.article}>
-          <h2>This is me</h2>
+          <h2>Om mig</h2>
           <p className="font-about">
-            For as long as I can remember, I have felt the need to create, to express myself through art. Being a
-            creative mind, I love to capture moments, turn feelings into colours and share it with you through my
-            drawings.
+            Så länge jag kan minnas har jag haft ett behov av och en längtan att få uttrycka mig i konst. Att få fånga
+            platser, individer och stunder, klä känslor i färg och skapa något bestående att dela med andra.
           </p>
           <p className="font-about">
-            Today, I spend most of my time drawing in Stavalund, a family farm located deep into the northern Swedish
-            woods. Surrounded by the nature and it’s stillness, this is where I find my peace and inspiration.
+            Idag ägnar jag mycket tid åt att teckna i Stavalund: en släktgård djupt belägen i den norrländska skogen.
+            När jag är omgiven av naturen och tystnaden här, hittar jag som mest ro och inspiration.
           </p>
           <p className="font-about">
-            All of my drawings hold a foundation of nature, strength, calm and freedom. Those elements make the very
-            core of my drawing – the wild and the free. With my portraits, I hope to mirror those souls and individuals
-            so important to you and others they need to be forever kept in colour.
+            I alla mina tavlor finns en strimma av styrka, lugn och frihet – och en liten del av den vackra naturen. Med
+            det som grund tecknar jag de själar som är och har varit så betydelsefulla för dig och andra att de
+            förtjänar att för alltid få leva kvar i färg.
           </p>
           <p className="font-about">
             <i>/Therese Åhlund</i>

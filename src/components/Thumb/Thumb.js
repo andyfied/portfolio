@@ -5,6 +5,7 @@ const styles = {
     width: '100%',
     height: 'auto',
     display: 'block',
+    cursor: 'pointer',
   },
 }
 
