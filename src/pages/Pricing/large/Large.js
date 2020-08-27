@@ -94,15 +94,6 @@ class _Large extends Component {
 
           <div style={styles.columnRight}>
             <div className="card-view-desktop">
-              <h3>30 x 40 cm</h3>
-              <h4>
-                <em>Från 3299 SEK</em>
-              </h4>
-              <p>
-                <em>Inklusive inramning.</em>
-              </p>
-            </div>
-            <div className="card-view-desktop">
               <h3>40 x 50 cm</h3>
               <h4>
                 <em>Från 4499 SEK</em>

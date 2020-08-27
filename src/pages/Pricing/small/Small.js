@@ -71,15 +71,6 @@ class _Small extends Component {
             mig för mer information och prisuppgifter för just din tavla.
           </p>
           <section className="card-view">
-            <h3>30 x 40 cm</h3>
-            <h4>
-              <em>Från 3299 SEK</em>
-            </h4>
-            <p>
-              <em>Inklusive inramning.</em>
-            </p>
-          </section>
-          <section className="card-view">
             <h3>40 x 50 cm</h3>
             <h4>
               <em>Från 4499 SEK</em>
