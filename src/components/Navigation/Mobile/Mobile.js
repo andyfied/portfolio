@@ -109,6 +109,15 @@ class _Mobile extends Component {
                 Priser
               </MenuItem>
             </Link>
+            <Link to="/merits">
+              <MenuItem
+                onClick={() => {
+                  this.props.onSetShowDrawer(false)
+                }}
+              >
+                Meriter
+              </MenuItem>
+            </Link>
             <Link to="/contact">
               <MenuItem
                 onClick={() => {

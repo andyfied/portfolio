@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import '../About.css'
 import { fetchAsset } from '../../../actions/actionCreators'
+import goBusiness from '../assets/GoBusiness_triangle.jpg'
+import skelleftea from '../assets/skelleftea_logo.png'
 
 const styles = {
   article: {
@@ -29,6 +30,13 @@ const styles = {
   imgContainer: {
     width: '60%',
   },
+  logo: {
+    height: '80px',
+  },
+  sectionHeader: {
+    fontSize: '24px',
+    marginBottom: '10px',
+  },
 }
 
 const mapStateToProps = state => {
@@ -48,36 +56,40 @@ const mapDispatchToProps = dispatch => {
 class _Large extends Component {
   componentDidMount() {
     if (!this.props.asset.payload) {
-      this.props.onFetchAsset('30Z6bxvsfnqKVbhidmqVMe')
+      this.props.onFetchAsset('1azTxIL4DQw5mwAk3t1bTJ')
     }
   }
 
   render() {
     let topImageUrl = ''
-    if (this.props.asset.about_me) {
-      topImageUrl = `${this.props.asset.about_me.fields.file.url}?fm=jpg&fl=progressive&w=800`
+    if (this.props.asset.Pricing_closeup) {
+      topImageUrl = `${this.props.asset.Pricing_closeup.fields.file.url}?fm=jpg&fl=progressive&w=800`
     }
     return (
       <div style={styles.wrapper}>
-        <h2 style={styles.header}>Om mig</h2>
+        <h2 style={styles.header}>Synts och hörts</h2>
         <div style={styles.articleWrapper}>
           <article style={styles.article}>
-            <p className="font-about">
-              Så länge jag kan minnas har jag haft ett behov av och en längtan att få uttrycka mig i konst. Att få fånga
-              platser, individer och stunder, klä känslor i färg och skapa något bestående att dela med andra.
-            </p>
-            <p className="font-about">
-              Idag ägnar jag mycket tid åt att teckna i Stavalund: en släktgård djupt belägen i den norrländska skogen.
-              När jag är omgiven av naturen och tystnaden här, hittar jag som mest ro och inspiration.
-            </p>
-            <p className="font-about">
-              I alla mina tavlor finns en strimma av styrka, lugn och frihet – och en liten del av den vackra naturen.
-              Med det som grund tecknar jag de själar som är och har varit så betydelsefulla för dig och andra att de
-              förtjänar att för alltid få leva kvar i färg.
-            </p>
-            <p className="font-about-end">
-              <i>/Therese Åhlund</i>
-            </p>
+            <img style={styles.logo} src={goBusiness} alt="Go Business logo" />
+            <p>Deltagare i Go Business Inkubatorprogram VT 2021</p>
+            <img style={styles.logo} src={skelleftea} alt="Skelleftea logo" />
+            <p>Finns med på Skellefteå kommuns konstnärslista</p>
+            <h3 style={styles.sectionHeader}>2021</h3>
+            <ul>
+              <li>Jaktgården Långviken</li>
+            </ul>
+            <h3 style={styles.sectionHeader}>2020</h3>
+            <ul>
+              <li>Björkis Skellefteå</li>
+              <li>Royal Hästsport</li>
+              <li>Stavaträsk lanthandel</li>
+            </ul>
+            <h3 style={styles.sectionHeader}>2019</h3>
+            <ul>
+              <li>Västgård Game Fair</li>
+              <li>Åre höstmarknad </li>
+              <li>Jakt &amp; Trofe Boliden</li>
+            </ul>
           </article>
           <div style={styles.imgContainer}>
             <div

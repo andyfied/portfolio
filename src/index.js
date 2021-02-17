@@ -21,6 +21,7 @@ import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Pricing from './pages/Pricing'
 import Contact from './pages/Contact'
+import Merits from './pages/Merits'
 import NoMatch from './pages/NoMatch'
 import UnderConstruction from './pages/UnderConstruction'
 
@@ -72,6 +73,7 @@ ReactDOM.render(
                 <Route path="/about" component={About} onUpdate={() => window.scrollTo(0, 0)} />
                 <Route path="/pricing" component={Pricing} onUpdate={() => window.scrollTo(0, 0)} />
                 <Route path="/contact" component={Contact} onUpdate={() => window.scrollTo(0, 0)} />
+                <Route path="/merits" component={Merits} onUpdate={() => window.scrollTo(0, 0)} />
                 <Route path="*" component={NoMatch} onUpdate={() => window.scrollTo(0, 0)} />
               </AnimatedSwitch>
             </div>

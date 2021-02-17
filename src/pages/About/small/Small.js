@@ -30,14 +30,15 @@ const mapDispatchToProps = dispatch => {
 class _Small extends Component {
   componentDidMount() {
     if (!this.props.asset.payload) {
-      this.props.onFetchAsset('1azTxIL4DQw5mwAk3t1bTJ')
+      this.props.onFetchAsset('30Z6bxvsfnqKVbhidmqVMe')
     }
   }
 
   render() {
     let imageUrl = ''
-    if (this.props.asset.Pricing_closeup) {
-      imageUrl = `${this.props.asset.Pricing_closeup.fields.file.url}?fm=jpg&fl=progressive&w=800`
+    console.log(this.props.asset)
+    if (this.props.asset.about_me) {
+      imageUrl = `${this.props.asset.about_me.fields.file.url}?fm=jpg&fl=progressive&w=800`
     }
     return (
       <div className="pageContent">
