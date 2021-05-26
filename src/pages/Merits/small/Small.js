@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { fetchAsset } from '../../../actions/actionCreators'
 import goBusiness from '../assets/GoBusiness_triangle.jpg'
 import skelleftea from '../assets/skelleftea_logo.png'
+import madsGallery from '../assets/mads_art_gallery.jpg'
+import artAward from '../assets/art_award.png'
 
 const styles = {
   article: {
@@ -53,6 +55,10 @@ class _Small extends Component {
         <img style={styles.img} alt="Merits" src={imageUrl} />
         <article style={styles.article}>
           <h2>Synts och hörts</h2>
+          <img style={{ height: '120px' }} src={artAward} alt="Collectors Vision International Art Award" />
+          <p>Vinnare av Collectors Vision International Art Award 2021</p>
+          <img style={{ height: '160px' }} src={madsGallery} alt="M.A.D.S Art Gallery Milano" />
+          <p>International Art Exhibition GAIA The Origin, Milano</p>
           <img style={styles.logo} src={goBusiness} alt="Go Business logo" />
           <p>Deltagare i Go Business Inkubatorprogram VT 2021</p>
           <img style={styles.logo} src={skelleftea} alt="Skelleftea logo" />
