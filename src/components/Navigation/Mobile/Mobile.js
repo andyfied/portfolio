@@ -100,15 +100,6 @@ class _Mobile extends Component {
                 Om mig
               </MenuItem>
             </Link>
-            <Link to="/pricing">
-              <MenuItem
-                onClick={() => {
-                  this.props.onSetShowDrawer(false)
-                }}
-              >
-                Priser
-              </MenuItem>
-            </Link>
             <Link to="/merits">
               <MenuItem
                 onClick={() => {

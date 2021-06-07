@@ -65,6 +65,8 @@ class _Small extends Component {
           <p>Finns med på Skellefteå kommuns konstnärslista</p>
           <h3 style={styles.sectionHeader}>2021</h3>
           <ul>
+            <li>Publicerad i Contemporary Art Curator Magazine</li>
+            <li>M.A.D.S Gallery Milano</li>
             <li>Jaktgården Långviken</li>
           </ul>
           <h3 style={styles.sectionHeader}>2020</h3>

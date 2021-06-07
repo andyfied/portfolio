@@ -24,9 +24,6 @@ const Desktop = () => (
     <Link to="/about">
       <MenuItem className="menuItem">Om mig</MenuItem>
     </Link>
-    <Link to="/pricing">
-      <MenuItem className="menuItem">Priser</MenuItem>
-    </Link>
     <Link to="/contact">
       <MenuItem className="menuItem">Kontakt</MenuItem>
     </Link>
